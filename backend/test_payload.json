@@ -1,0 +1,14 @@
+{
+    "subscription": {
+      "endpoint": "...",
+      "keys": {
+        "p256dh": "...",
+        "auth": "..."
+      }
+    },
+    "payload": {
+      "title": "Test while Chrome is closed",
+      "body": "Did you get this?"
+    }
+  }
+  
