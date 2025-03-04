@@ -1,3 +1,5 @@
+const BACKEND_URL = "http://localhost:8080";
+
 async function urlBase64ToUint8Array(base64String) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
     const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
@@ -8,7 +10,7 @@ async function urlBase64ToUint8Array(base64String) {
 document.getElementById('subscribe').onclick = async () => {
     const registration = await navigator.serviceWorker.register('/sw.js');
 
-    const vapidPublicKey = await fetch('/vapidPublicKey').then(res => res.text());
+    const vapidPublicKey = await fetch(`${BACKEND_URL}/vapidPublicKey`).then(res => res.text());
     const convertedVapidKey = await urlBase64ToUint8Array(vapidPublicKey);
 
     const subscription = await registration.pushManager.subscribe({
@@ -16,7 +18,7 @@ document.getElementById('subscribe').onclick = async () => {
         applicationServerKey: convertedVapidKey
     });
 
-    await fetch('/sendNotification', {
+    await fetch(`${BACKEND_URL}/sendNotification`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

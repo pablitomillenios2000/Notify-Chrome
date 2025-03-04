@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 from pywebpush import webpush, WebPushException
+from flask_cors import CORS
 import json
 
 app = Flask(__name__)
+CORS(app)
+
 
 with open('vapid_private_key.pem', 'r') as f:
     VAPID_PRIVATE_KEY = f.read()
