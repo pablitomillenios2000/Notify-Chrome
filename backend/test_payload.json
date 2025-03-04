@@ -1,14 +1,15 @@
 {
-    "subscription": {
-      "endpoint": "...",
-      "keys": {
-        "p256dh": "...",
-        "auth": "..."
-      }
+  "subscription":  {
+        "endpoint": "https://fcm.googleapis.com/fcm/send/e5cUDnK8I0Q:APA91bEAe370OGLiXmkcfurrsZwPqq0d_fHG83-Frs2EYQdbjGPAWu-JbwGAjW6WQbRs4chL7Mekeqb0DpjgIjb_WlclCo5a7Y9Du6MQqt_2YzTUUt-_KyLwWOM4D2DBz2yHDjfRpgel",
+        "expirationTime": null,
+        "keys": {
+            "p256dh": "BCfEKuT5gG3-GNRNyN-ssvCVh5VrwuCZYRtQ8jpYayYITOCZfWAgKkdkAcNfj80opVKPS6OBQeVp-N2nLsgkdOQ",
+            "auth": "V5XUSF_RCt46mJqS9f4TDQ"
+        }
     },
-    "payload": {
-      "title": "Test while Chrome is closed",
-      "body": "Did you get this?"
-    }
-  }
-  
+
+"payload": {
+    "title": "Test while Chrome is closed",
+    "body": "Did you get this?"
+}
+}
