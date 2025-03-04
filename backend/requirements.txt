@@ -1,3 +1,5 @@
 flask
 pywebpush
 cryptography
+flask_cors 
+json
